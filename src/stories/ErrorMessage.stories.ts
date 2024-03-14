@@ -1,25 +1,23 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Label } from '../components/Label.tsx';
+import { ErrorMessage } from '../components/ErrorMessage.tsx';
 
 const meta = {
-  title: 'Text/Label',
-  component: Label,
+  title: 'Text/ErrorMessage',
+  component: ErrorMessage,
   parameters: {
     layout: 'centered',
   },
   tags: ['autodocs'],
   argTypes: {
-    htmlFor: { control: 'text', description: 'htmlFor'},
     children: { control: 'text', description: 'children'},
   },
-} satisfies Meta<typeof Label>;
+} satisfies Meta<typeof ErrorMessage>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    htmlFor: "username",
-    children: 'email',
+    children: 'Error message',
   },
 };
