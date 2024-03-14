@@ -1,4 +1,9 @@
-# design-system
+# Welcome to design-system 👋
+[![Version](https://img.shields.io/npm/v/design-system.svg)](https://www.npmjs.com/package/design-system)
+
+> Design-System using Storybook.
+
+## Install
 
 ```shell
 # React, Typescript
@@ -18,6 +23,23 @@ $ npx tailwindcss init -p
 $ npm install @fontsource/noto-sans
 ```
 
-# Reference
+## Usage
 
-- [Storybook](https://storybook.js.org/docs/get-started)
+```sh
+# project
+$ npm run dev
+
+# storybook
+$ npm run storybook
+```
+
+## Run tests
+
+```sh
+```
+
+## Author
+
+👤 **Kevin Ahn**
+
+* Github: [@seung-seop-ahn](https://github.com/seung-seop-ahn)
