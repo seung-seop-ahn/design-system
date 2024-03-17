@@ -24,7 +24,6 @@ $ npm install @fontsource/noto-sans
 
 # https://chromatic.com (sign-up with Github)
 $ npm install --save-dev chromatic
-$ npx chromatic --project-token={your-token}
 ```
 
 ## Usage
@@ -35,6 +34,9 @@ $ npm run dev
 
 # storybook
 $ npm run storybook
+
+# chromatic
+$ npx chromatic --project-token={your-token}
 ```
 
 ## Run tests
