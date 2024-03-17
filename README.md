@@ -41,6 +41,7 @@ $ npm run storybook
 ## What I need to know
 
 - Cumulative Layout Shift (CLS)
+- Event Bubbling
 
 ## Author
 
