@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {},
+    borderRadius: {
+      "primary-button": "5px",
+    },
     // color
     colors: {
       primary: "#1d2745",
