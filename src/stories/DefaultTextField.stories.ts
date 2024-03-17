@@ -33,6 +33,11 @@ const meta = {
       action: 'changed',
       description: 'onChange'
     },
+    id: {
+      control: 'text',
+      description: 'id',
+      defaultValue: false
+    },
     value: {
       control: 'text',
       description: 'value'
@@ -55,6 +60,7 @@ export const Default: Story = {
     onIconClick: () => {},
     placeholder: 'placeholder',
     onChange: () => {},
+    id: 'email',
     value: 'value',
     isError: false
   },

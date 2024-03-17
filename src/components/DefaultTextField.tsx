@@ -9,6 +9,7 @@ interface IDefaultTextFieldProps {
     onIconClick: React.MouseEventHandler<HTMLButtonElement>;
     placeholder: string;
     onChange: React.ChangeEventHandler<HTMLInputElement>;
+    id: string;
     value: string;
     isError: boolean
 }
@@ -20,6 +21,7 @@ export const DefaultTextField = ({
     onIconClick,
     placeholder,
     onChange,
+    id,
     value,
     isError
 }: IDefaultTextFieldProps) => {
@@ -31,16 +33,20 @@ export const DefaultTextField = ({
             : 'border-primary';
 
     return (
-        <div>
+        <div className={'relative text-field'}>
             <div
                 onFocus={() => setIsFocused(true)}
                 onBlur={() => setIsFocused(false)}
                 className={`
+                    flex
+                    items-center
+                    justify-between
                     text-primary 
                     border-b 
                     ${borderColor}
                 `}>
                 <input
+                    id={id}
                     className={'outline-none'}
                     type={"text"}
                     placeholder={placeholder}
@@ -56,7 +62,9 @@ export const DefaultTextField = ({
                 }
             </div>
             {isError &&
-                <ErrorMessage>{errorMessage}</ErrorMessage>
+                // <div className={'absolute'}>
+                  <ErrorMessage>{errorMessage}</ErrorMessage>
+                // </div>
             }
         </div>
     )

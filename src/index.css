@@ -3,5 +3,11 @@
 @tailwind utilities;
 
 body {
-  font-family: "Noto Sans";
+  font-family: "Noto Sans KR";
+}
+
+@layer components {
+  .text-field > p {
+    @apply absolute
+  }
 }

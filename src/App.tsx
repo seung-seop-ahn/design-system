@@ -1,36 +1,42 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import {Label} from "./components/Label.tsx";
+import {DefaultTextField} from "./components/DefaultTextField.tsx";
+import {useState} from "react";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [isError, setIsError] = useState(false)
 
   return (
     <>
-      <div>
-        <h1 className="text-3xl font-light text-secondary underline">
-          Hello world!
-        </h1>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Label htmlFor={'email'}>Email</Label>
+      <DefaultTextField
+          id={'email'}
+          placeholder={'Write email'}
+          value={''}
+          errorMessage={'Check email'}
+          isError={isError}
+          iconPath={'/vite.svg'}
+          iconAlt={'delete'}
+          onIconClick={() => {}}
+          onChange={() => {}}
+      />
+      <div className={'my-20'}></div>
+      <Label htmlFor={'address'}>Address</Label>
+      <DefaultTextField
+          id={'address'}
+          placeholder={'Write address'}
+          value={''}
+          errorMessage={'Check address'}
+          isError={isError}
+          iconPath={'/vite.svg'}
+          iconAlt={'delete'}
+          onIconClick={() => {}}
+          onChange={() => {}}
+      />
+      <button
+          onClick={() => setIsError(!isError)}>
+          Error Toggle
+      </button>
     </>
   )
 }
