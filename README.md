@@ -36,6 +36,7 @@ $ npm run dev
 $ npm run storybook
 
 # chromatic
+# https://www.chromatic.com/docs/storybook/ci/
 $ npx chromatic --project-token={your-token}
 ```
 
