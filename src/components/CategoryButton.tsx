@@ -19,7 +19,7 @@ export const CategoryButton = ({
                 rounded-button-default
                 border
                 border-primary
-                text-mono1
+                text-primary
                 text-base
                 font-bold
                 pl-[22px]
