@@ -21,6 +21,10 @@ $ npx tailwindcss init -p
 
 # https://www.npmjs.com/package/@fontsource/noto-sans
 $ npm install @fontsource/noto-sans
+
+# https://chromatic.com (sign-up with Github)
+$ npm install --save-dev chromatic
+$ npx chromatic --project-token={your-token}
 ```
 
 ## Usage
