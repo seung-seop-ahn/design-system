@@ -1,0 +1,39 @@
+name: "ui-test"
+
+on: push
+
+jobs:
+  accessibility-test:
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
+    if: github.event.deployment_status.state == 'success'
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version-file: '.nvmrc'
+      - name: Install dependencies
+        run: yarn
+      - name: Install Playwright
+        run: npx playwright install --with-deps
+      - name: Run Storybook tests
+        run: yarn test-storybook
+        env:
+          TARGET_URL: '${{ github.event.deployment_status.target_url }}'
+
+  chromatic:
+    needs: accessibility-test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Publish to Chromatic
+        uses: chromaui/action@latest
+        with:
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
