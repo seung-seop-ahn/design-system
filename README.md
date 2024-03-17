@@ -38,6 +38,10 @@ $ npm run storybook
 ```sh
 ```
 
+## What I need to know
+
+- Cumulative Layout Shift (CLS)
+
 ## Author
 
 👤 **Kevin Ahn**
