@@ -4,5 +4,5 @@ interface ILabelProps {
 }
 
 export const Label = ({ htmlFor, children }: ILabelProps) => {
-    return <label className={"text-sm text-secondary"} htmlFor={htmlFor}>{children}</label>
+    return <label className={"text-sm text-primary"} htmlFor={htmlFor}>{children}</label>
 }
