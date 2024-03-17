@@ -24,6 +24,12 @@ $ npm install @fontsource/noto-sans
 
 # https://chromatic.com (sign-up with Github)
 $ npm install --save-dev chromatic
+
+# https://storybook.js.org/docs/writing-tests/accessibility-testing (storybook accessbility)
+$ npm install @storybook/addon-a11y --save-dev
+$ npm install axe-playwright --save-dev
+$ npm install @storybook/test-runner --save-dev
+# $ npx playwright install
 ```
 
 ## Usage
@@ -43,6 +49,7 @@ $ npx chromatic --project-token={your-token}
 ## Run tests
 
 ```sh
+$ npm run test-storybook
 ```
 
 ## What I need to know
