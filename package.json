@@ -1,6 +1,16 @@
 {
-  "name": "design-system",
-  "private": true,
+  "name": "storybook-design-system-test-by-kevin",
+  "description": "Storybook design system test by Kevin",
+  "private": false,
+  "files": [
+    "src/components",
+    "index.css",
+    "src/mixins"
+  ],
+  "main": "src/components/index.tsx",
+  "publishConfig": {
+    "access": "public"
+  },
   "version": "0.0.0",
   "type": "module",
   "scripts": {

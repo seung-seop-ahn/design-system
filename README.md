@@ -35,7 +35,6 @@ $ npm install @storybook/test-runner --save-dev
 $ npm install @storybook/components @storybook/addons --save-dev
 $ npm install @storybook/test @storybook/addon-interactions --save-dev
 $ npm install @storybook/vue3 --save-dev
-
 ```
 
 ## Usage
@@ -50,6 +49,12 @@ $ npm run storybook
 # chromatic
 # https://www.chromatic.com/docs/storybook/ci/
 $ npx chromatic --project-token={your-token}
+
+# tailwind css export for npm packaging (building tailwind css)
+# https://tailwindcss.com/docs/installation
+$ npx tailwindcss -i ./src/index.css -o ./index.css --watch
+$ npm login
+$ npm publish --public
 ```
 
 ## Run tests
@@ -57,6 +62,10 @@ $ npx chromatic --project-token={your-token}
 ```sh
 $ npm run test-storybook
 ```
+
+## Results
+
+- [storybook-design-system-test-by-kevin](https://www.npmjs.com/package/storybook-design-system-test-by-kevin)
 
 ## What I need to know
 
