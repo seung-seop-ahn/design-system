@@ -39,10 +39,10 @@ export const EmptyForm: Story = {
  * to learn more about using the canvasElement to query the DOM
  */
 export const FilledForm: Story = {
-    render: () => ({
-        components: { LoginForm },
-        template: `<LoginForm />`,
-    }),
+    // render: () => ({
+    //     components: { LoginForm },
+    //     template: `<LoginForm />`,
+    // }),
     play: async ({ canvasElement }) => {
         const canvas = within(canvasElement);
 
