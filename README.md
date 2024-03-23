@@ -30,6 +30,12 @@ $ npm install @storybook/addon-a11y --save-dev
 $ npm install axe-playwright --save-dev
 $ npm install @storybook/test-runner --save-dev
 # $ npx playwright install
+
+# https://storybook.js.org/docs/writing-tests/interaction-testing
+$ npm install @storybook/components @storybook/addons --save-dev
+$ npm install @storybook/test @storybook/addon-interactions --save-dev
+$ npm install @storybook/vue3 --save-dev
+
 ```
 
 ## Usage

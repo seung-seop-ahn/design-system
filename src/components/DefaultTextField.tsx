@@ -46,6 +46,7 @@ export const DefaultTextField = ({
                     ${borderColor}
                 `}>
                 <input
+                    data-testid={id}
                     id={id}
                     className={'outline-none'}
                     type={"text"}
