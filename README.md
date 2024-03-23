@@ -56,6 +56,7 @@ $ npm run test-storybook
 
 - Cumulative Layout Shift (CLS)
 - Event Bubbling
+- [Workflow Storybook Test Scripts hangs indefinitely](https://github.com/storybookjs/test-runner/issues/301)
 
 ## Author
 
